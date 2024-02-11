@@ -1,0 +1,16 @@
+C:\windesheim\02-sl\pong\pong\bin\Debug\net8.0\pong.exe
+C:\windesheim\02-sl\pong\pong\bin\Debug\net8.0\pong.deps.json
+C:\windesheim\02-sl\pong\pong\bin\Debug\net8.0\pong.runtimeconfig.json
+C:\windesheim\02-sl\pong\pong\bin\Debug\net8.0\pong.dll
+C:\windesheim\02-sl\pong\pong\bin\Debug\net8.0\pong.pdb
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.GeneratedMSBuildEditorConfig.editorconfig
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.AssemblyInfoInputs.cache
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.AssemblyInfo.cs
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.csproj.CoreCompileInputs.cache
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.sourcelink.json
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.dll
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\refint\pong.dll
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.pdb
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.genruntimeconfig.cache
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\ref\pong.dll
+C:\windesheim\02-sl\pong\pong\obj\Debug\net8.0\pong.csproj.ResolveComReference.cache
