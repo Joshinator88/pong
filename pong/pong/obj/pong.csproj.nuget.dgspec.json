@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\windesheim\\02-sl\\pong\\pong\\pong.csproj": {}
+    "C:\\windesheim\\pong\\pong\\pong\\pong.csproj": {}
   },
   "projects": {
-    "C:\\windesheim\\02-sl\\pong\\pong\\pong.csproj": {
+    "C:\\windesheim\\pong\\pong\\pong\\pong.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\windesheim\\02-sl\\pong\\pong\\pong.csproj",
+        "projectUniqueName": "C:\\windesheim\\pong\\pong\\pong\\pong.csproj",
         "projectName": "pong",
-        "projectPath": "C:\\windesheim\\02-sl\\pong\\pong\\pong.csproj",
+        "projectPath": "C:\\windesheim\\pong\\pong\\pong\\pong.csproj",
         "packagesPath": "C:\\Users\\Joshu\\.nuget\\packages\\",
-        "outputPath": "C:\\windesheim\\02-sl\\pong\\pong\\obj\\",
+        "outputPath": "C:\\windesheim\\pong\\pong\\pong\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,11 +39,30 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "NuGet.Frameworks": {
+              "target": "Package",
+              "version": "[6.9.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

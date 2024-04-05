@@ -2,57 +2,48 @@
 {
     internal class Field
     {
-        private int _xStart;
-        private int _yStart;
-        private int _width;
-        private int _height;
+        private Configuration _config = new();
         
-        public Field(int xStart, int yStart, int width, int height) 
-        { 
-        _xStart = xStart;
-        _yStart = yStart;
-        _width = width;
-        _height = height;
-        }
+        
 
-        public void scoreboard(int score01, int score02)
+        public void Scoreboard()
         {
-            int position1 = _width / 4;
+            int position1 = Configuration.FieldWidth / 4;
             Console.SetCursorPosition(position1, 1);
-            Console.Write(score01.ToString());
+            Console.Write(_config.score01.ToString());
             Console.SetCursorPosition(position1 * 2, 1);
             Console.Write('-');
             Console.SetCursorPosition(position1 * 3, 1);
-            Console.Write(score02.ToString());
+            Console.Write(_config.score02.ToString());
         }
 
         public void PlayingField()
         {
-            Console.SetCursorPosition(0 + _xStart, 0 + _yStart);
+            Console.SetCursorPosition(0 + Configuration.xStart, 0 + Configuration.YStart);
             Console.Write("\u250c");
-            Console.SetCursorPosition(_width + _xStart, 0 + _yStart);
+            Console.SetCursorPosition(Configuration.FieldWidth + Configuration.xStart, 0 + Configuration.YStart);
             Console.Write("\u2510");
 
-            Console.SetCursorPosition(0 + _xStart, _height + _yStart);
+            Console.SetCursorPosition(0 + Configuration.xStart, Configuration.FieldHeight + Configuration.YStart);
             Console.Write("\u2514");
-            Console.SetCursorPosition(_width + _xStart, _height + _yStart);
+            Console.SetCursorPosition(Configuration.FieldWidth + Configuration.xStart, Configuration.FieldHeight + Configuration.YStart);
             Console.Write("\u2518");
             // string
-            for (int x = 1 + _xStart; x < _width + _xStart; x++)
+            for (int x = 1 + Configuration.xStart; x < Configuration.FieldWidth + Configuration.xStart; x++)
             {
 
-                Console.SetCursorPosition(x, _yStart);
+                Console.SetCursorPosition(x, Configuration.YStart);
                 Console.Write("\u2500");
-                Console.SetCursorPosition(x, _height + _yStart);
+                Console.SetCursorPosition(x, Configuration.FieldHeight + Configuration.YStart);
                 Console.Write("\u2500");
 
-                if (x == 1 + _xStart || x + _xStart == 30)
+                if (x == 1 + Configuration.xStart || x + Configuration.xStart == 30)
                 {
-                    for (int y = 1 + _yStart; y < _height + _yStart; y++)
+                    for (int y = 1 + Configuration.YStart; y < Configuration.FieldHeight + Configuration.YStart; y++)
                     {
-                        Console.SetCursorPosition(0 + _xStart, y);
+                        Console.SetCursorPosition(0 + Configuration.xStart, y);
                         Console.Write("\u2502");
-                        Console.SetCursorPosition(_width + _xStart, y);
+                        Console.SetCursorPosition(Configuration.FieldWidth + Configuration.xStart, y);
                         Console.Write("\u2502");
                     }
                 }
@@ -65,10 +56,18 @@
         public void Score(string name)
         {
             string message = name + " scored!!!";
+            if (name == "Player01")
+            {
+                _config.score01++;
+            }
+            else
+            {
+                _config.score02++;
+            }
             Console.Clear();
             PlayingField();
-            int xSentanceStart = (_width - _xStart) / 2 - message.Count() / 2;
-            Console.SetCursorPosition(xSentanceStart, (_height - _yStart) / 2);
+            int xSentanceStart = (Configuration.FieldWidth - Configuration.xStart) / 2 - message.Count() / 2;
+            Console.SetCursorPosition(xSentanceStart, (Configuration.FieldHeight - Configuration.YStart) / 2);
             Console.Write(message);
         }
     }
